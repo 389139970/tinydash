@@ -552,17 +552,17 @@ app.controller('DashController', function ($scope, sources, contributors, dashif
         if ($scope.customABRRulesSelected) {
             console.log('on custonABR');
             $scope.player.useDefaultABRRules(false);
-            $scope.player.addABRCustomRule('qualitySwitchRules', 'SimpleRule', SimpleRule);
-            /*
+            /*$scope.player.addABRCustomRule('qualitySwitchRules', 'SimpleRule', SimpleRule);*/
+            
             $scope.player.addABRCustomRule('qualitySwitchRules', 'KalmanRule', KalmanRule);
-            $scope.player.addABRCustomRule('qualitySwitchRules', 'DownloadRatioRule', DownloadRatioRule);
+            /*$scope.player.addABRCustomRule('qualitySwitchRules', 'DownloadRatioRule', DownloadRatioRule);
             */
         } else {
-            $scope.player.useDefaultABRRules(true);
-            $scope.player.removeABRCustomRule('SimpleRule');
-            /*
-            $scope.player.removeABRCustomRule('KalmanRule');
-            $scope.player.removeABRCustomRule('DownloadRatioRule');
+            /*$scope.player.useDefaultABRRules(true);
+            /*$scope.player.removeABRCustomRule('SimpleRule');*/
+            
+            /*$scope.player.removeABRCustomRule('KalmanRule');
+            /*s$scope.player.removeABRCustomRule('DownloadRatioRule');
             */
         }
         var protData = {};
